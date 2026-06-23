@@ -1,0 +1,24 @@
+# Core data processing
+polars==1.30.0
+numpy==2.2.6
+pandas==2.3.0
+
+# Embeddings & Vector Search
+sentence-transformers==4.1.0
+faiss-cpu==1.11.0
+torch==2.7.1
+
+# BM25 Keyword Search
+rank-bm25==0.2.2
+
+# LLM (pre-computation only — not used during ranking)
+openai==1.86.0
+
+# Utilities
+tqdm==4.67.1
+pyyaml==6.0.2
+orjson==3.10.18
+
+# Scoring model (optional — for learning-to-rank)
+# xgboost==3.0.2
+# lightgbm==4.6.0

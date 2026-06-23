@@ -1,0 +1,22 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: redrob-discovery-webapp
+  mvc:
+    async:
+      # The live ranker re-run streams logs for ~60-90s over SSE; keep the async window generous.
+      request-timeout: 600000
+  jackson:
+    default-property-inclusion: non_null
+
+logging:
+  level:
+    com.redrob: INFO
+
+# All paths default to auto-detected repo root (the folder containing submission.csv + ranker/).
+# Override any of these via environment variables when running in Docker.
+discovery:
+  repo-root: ${DISCOVERY_REPO_ROOT:}
+  python: ${DISCOVERY_PYTHON:}

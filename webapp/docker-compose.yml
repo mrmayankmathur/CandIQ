@@ -1,0 +1,25 @@
+# Single-service demo sandbox. The large dataset/artifacts and the writable
+# submission.csv are mounted from the host repo so they stay out of the image.
+#
+#   docker compose -f webapp/docker-compose.yml up --build
+#
+# Then open http://localhost:8080
+#
+# NOTE: the image installs the ranker's Python deps (torch/faiss/sentence-transformers),
+# so the first build is large/slow. For a quick local demo use ./gradlew :backend:bootRun.
+
+services:
+  app:
+    build:
+      context: ..                      # repo root: Dockerfile needs ranker/requirements.txt + webapp/
+      dockerfile: webapp/Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      DISCOVERY_REPO_ROOT: /work
+      DISCOVERY_PYTHON: /opt/venv/bin/python
+      KMP_DUPLICATE_LIB_OK: "TRUE"
+    volumes:
+      - ../dataset:/work/dataset:ro                 # candidates.jsonl (read-only)
+      - ../ranker:/work/ranker                      # ranker package + artifacts (re-run reads these)
+      - ../submission.csv:/work/submission.csv      # engine output (read at startup, rewritten on re-run)

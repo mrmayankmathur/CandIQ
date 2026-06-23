@@ -1,0 +1,147 @@
+{
+  "job_title": "Senior AI/ML Engineer — Ranking, Retrieval & Matching",
+  "company": "Redrob",
+  "summary": "Own the intelligence layer of Redrob's product — ranking, retrieval, and matching systems. Ship a v2 ranking system with embeddings, hybrid retrieval, and LLM-based re-ranking. Set up evaluation infrastructure (offline benchmarks, A/B testing, feedback loops).",
+
+  "experience_range": {
+    "stated_min": 5,
+    "stated_max": 9,
+    "actual_min": 4,
+    "actual_max": 15,
+    "ideal_min": 6,
+    "ideal_max": 8,
+    "note": "JD says 5-9 but will consider outside band if signals are strong. Ideal is 6-8 years total, 4-5 in applied ML/AI at product companies."
+  },
+
+  "location": {
+    "preferred": ["Pune", "Noida"],
+    "acceptable": ["Hyderabad", "Mumbai", "Delhi NCR", "Bangalore", "India"],
+    "international": "case-by-case, no visa sponsorship",
+    "work_mode": "hybrid (offices Tue/Thu), async-first",
+    "notice_period_ideal_days": 30,
+    "notice_period_buyout_days": 30
+  },
+
+  "must_have_skills": [
+    {
+      "category": "Embeddings-based Retrieval",
+      "description": "Production experience with embeddings-based retrieval systems deployed to real users",
+      "keywords": ["sentence-transformers", "openai embeddings", "bge", "e5", "dense retrieval", "embeddings", "vector embeddings", "text embeddings"],
+      "weight": 1.0
+    },
+    {
+      "category": "Vector DB / Hybrid Search",
+      "description": "Production experience with vector databases or hybrid search infrastructure",
+      "keywords": ["pinecone", "weaviate", "qdrant", "milvus", "opensearch", "elasticsearch", "faiss", "vector database", "hybrid search", "ann"],
+      "weight": 1.0
+    },
+    {
+      "category": "Python",
+      "description": "Strong Python skills, code quality matters",
+      "keywords": ["python"],
+      "weight": 0.8
+    },
+    {
+      "category": "Ranking Evaluation",
+      "description": "Hands-on experience designing evaluation frameworks for ranking systems",
+      "keywords": ["ndcg", "mrr", "map", "mean average precision", "a/b testing", "ranking evaluation", "information retrieval", "evaluation framework", "offline evaluation"],
+      "weight": 0.9
+    }
+  ],
+
+  "nice_to_have_skills": [
+    {
+      "category": "LLM Fine-tuning",
+      "keywords": ["lora", "qlora", "peft", "fine-tuning", "finetuning"],
+      "weight": 0.4
+    },
+    {
+      "category": "Learning to Rank",
+      "keywords": ["learning to rank", "ltr", "xgboost", "lightgbm", "lambdamart", "neural ranking"],
+      "weight": 0.4
+    },
+    {
+      "category": "HR-tech / Marketplace",
+      "keywords": ["hr tech", "recruiting", "recruitment", "marketplace", "talent acquisition", "job matching"],
+      "weight": 0.3
+    },
+    {
+      "category": "Distributed Systems",
+      "keywords": ["distributed systems", "kubernetes", "docker", "microservices", "kafka", "ray", "dask", "large-scale inference"],
+      "weight": 0.3
+    },
+    {
+      "category": "Open Source",
+      "keywords": ["open source", "open-source", "github contributions"],
+      "weight": 0.2
+    }
+  ],
+
+  "explicit_disqualifiers": [
+    {
+      "id": "pure_research",
+      "description": "Entire career in pure research (academic labs, research-only roles) without production deployment",
+      "severity": "hard_reject"
+    },
+    {
+      "id": "langchain_only",
+      "description": "AI experience consists primarily of recent (<12 months) LangChain/API-wrapper projects without pre-LLM ML production experience",
+      "severity": "soft_reject"
+    },
+    {
+      "id": "title_chaser",
+      "description": "Career trajectory shows switching companies every ≤1.5 years to chase titles (Senior → Staff → Principal)",
+      "severity": "soft_reject"
+    },
+    {
+      "id": "consulting_only",
+      "description": "Entire career at consulting/services firms (TCS, Infosys, Wipro, Accenture, Cognizant, Capgemini, etc.) with no product company experience",
+      "severity": "hard_reject"
+    },
+    {
+      "id": "non_nlp_domain",
+      "description": "Primary expertise is computer vision, speech, or robotics WITHOUT significant NLP/IR exposure",
+      "severity": "soft_reject"
+    },
+    {
+      "id": "not_coding",
+      "description": "Senior engineer who hasn't written production code in 18+ months (moved to pure architecture/tech lead)",
+      "severity": "soft_reject"
+    }
+  ],
+
+  "ideal_candidate_profile": {
+    "total_experience_years": "6-8",
+    "applied_ml_experience_years": "4-5 at product companies (not pure services)",
+    "shipped": "At least one end-to-end ranking/search/recommendation system to real users at meaningful scale",
+    "opinions": "Strong opinions about retrieval (hybrid vs dense), evaluation (offline vs online), LLM integration (fine-tune vs prompt)",
+    "location": "India (Noida or Pune preferred)",
+    "platform_activity": "Active on Redrob platform / clearly in the job market"
+  },
+
+  "expanded_search_terms": {
+    "core_domain": [
+      "ranking system", "search engine", "recommendation engine", "recommender system",
+      "information retrieval", "candidate matching", "job matching", "talent search",
+      "semantic search", "hybrid search", "dense retrieval", "sparse retrieval",
+      "reranking", "relevance scoring", "query understanding"
+    ],
+    "ml_techniques": [
+      "embeddings", "vector search", "approximate nearest neighbor", "cosine similarity",
+      "cross-encoder", "bi-encoder", "contrastive learning", "siamese network",
+      "transformers", "bert", "sentence-bert", "rag", "retrieval augmented generation",
+      "feature engineering", "model evaluation", "offline metrics"
+    ],
+    "infrastructure": [
+      "elasticsearch", "opensearch", "solr", "lucene",
+      "faiss", "annoy", "hnswlib", "scann",
+      "pinecone", "weaviate", "qdrant", "milvus", "chroma",
+      "redis", "postgresql", "mongodb"
+    ],
+    "production_signals": [
+      "deployed", "production", "shipped", "scaled", "served",
+      "latency", "throughput", "sla", "monitoring", "a/b test",
+      "real users", "live traffic", "api", "microservice"
+    ]
+  }
+}

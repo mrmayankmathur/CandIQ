@@ -1,0 +1,63 @@
+# Redrob Hackathon — Submission Metadata Template
+#
+# Copy this file to your repo root as `submission_metadata.yaml` and fill it in.
+# The fields here should match what you submit via the portal at upload time.
+# Stage 3 review uses this file to verify your portal metadata.
+
+# ============================================================================
+# Team identity
+# ============================================================================
+team_name: "Team Antigravity"
+
+primary_contact:
+  name: "Mayank Mathur"
+  email: "mrmayankmathur@gmail.com"
+  phone: "+91-9315474933"
+
+team_members:
+  - name: "Mayank Mathur"
+    email: "mrmayankmathur@gmail.com"
+    role: "AI/ML Engineer"
+
+# ============================================================================
+# Code and reproducibility
+# ============================================================================
+github_repo: "https://github.com/mayankmathur/intelligent_candidate_discovery"
+
+sandbox_link: "https://github.com/mayankmathur/intelligent_candidate_discovery/tree/main/webapp"
+
+reproduce_command: "docker run --rm --memory=16g --network=none -v $(pwd)/dataset:/data:ro -v $(pwd):/output icd-ranker"
+
+# ============================================================================
+# Compute environment
+# ============================================================================
+compute:
+  platform: "MacBook"
+  cpu_cores: 8
+  ram_gb: 8
+  python_version: "3.10.12"
+  os: "macOS"
+  uses_gpu_for_inference: false
+  has_network_during_ranking: false
+  pre_computation_required: true
+  pre_computation_time_minutes: 15
+
+# ============================================================================
+# Approach summary (optional but recommended)
+# ============================================================================
+methodology_summary: |
+  Two-system architecture: An offline Python engine for ranking, and a Spring Boot + Kotlin/JS web app for the sandbox UI.
+  The ranking engine uses pre-computed FAISS (BGE-small embeddings) and BM25 (token-deduplicated) fused via RRF to retrieve the top 500 candidates. 
+  A strict filtering pipeline (5 checks) catches keyword-stuffer honeypots and hard disqualifiers. 
+  The final score (0.7-0.87 range) blends 8 features (skills, career quality, notice period, etc.). 
+  Runs in ~63s with a 2.8GB memory footprint on CPU.
+
+# ============================================================================
+# Declarations
+# ============================================================================
+declarations:
+  read_submission_spec: true
+  code_is_original_work: true
+  no_collusion: true
+  honeypot_check_done: true
+  reproduction_tested: true

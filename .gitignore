@@ -1,0 +1,40 @@
+# Ignore virtual environments
+.venv/
+venv/
+env/
+
+# Ignore Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ignore large datasets
+dataset/*.jsonl
+dataset/*.json
+dataset/*.pkl
+dataset/*.npy
+dataset/*.index
+dataset/*.parquet
+
+# Ignore compiled ranking artifacts
+ranker/artifacts/*.npy
+ranker/artifacts/*.index
+ranker/artifacts/*.pkl
+ranker/artifacts/*.parquet
+ranker/artifacts/*.json
+
+# Ignore Java/Kotlin/Gradle build directories
+webapp/.gradle/
+webapp/build/
+webapp/out/
+webapp/bin/
+
+# Ignore IDE specific files
+.idea/
+.vscode/
+*.swp
+.DS_Store
+
+# Antigravity CLI and Claude specific directories
+.antigravitycli/
+.claude/
