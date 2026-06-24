@@ -6,6 +6,7 @@ import react.FC
 import react.Props
 import react.dom.html.ReactHTML.div
 import react.dom.html.ReactHTML.span
+import react.dom.html.ReactHTML.button
 import react.useEffect
 import react.useState
 
@@ -108,6 +109,7 @@ private external interface ProfileBodyProps : Props {
 }
 
 private val ProfileBody = FC<ProfileBodyProps> { props ->
+    val (diveOpen, setDiveOpen) = useState(false)
     val d = props.detail
     val p = d.profile.profile
     val r = d.ranking
@@ -170,6 +172,32 @@ private val ProfileBody = FC<ProfileBodyProps> { props ->
             s.color = "#dfe2f5"
         }
         +(r.reasoning ?: "No reasoning available.")
+    }
+
+    div {
+        css {
+            val s = asDynamic()
+            s.marginTop = "10px"
+            s.marginBottom = "8px"
+        }
+        button {
+            css {
+                val s = asDynamic()
+                s.background = "transparent"
+                s.border = "1px solid ${Theme.borderSoft}"
+                s.color = Theme.accent
+                s.borderRadius = "8px"
+                s.padding = "6px 12px"
+                s.fontSize = "13px"
+                s.cursor = "pointer"
+                s.fontWeight = "600"
+            }
+            onClick = { setDiveOpen(!diveOpen) }
+            +("✨ " + if (diveOpen) "Hide AI Deep-Dive" else "Generate AI Deep-Dive")
+        }
+        if (diveOpen) {
+            AiDeepDive { candidateId = d.profile.candidateId }
+        }
     }
 
     // Match breakdown

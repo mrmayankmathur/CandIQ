@@ -24,6 +24,13 @@ tasks.withType<Test> {
     useJUnitPlatform()
 }
 
+// Run from the repo root so (a) the optional .env (OPENAI_* for the AI Deep-Dive) resolves and
+// (b) AppPaths auto-detects the repo root immediately. Gradle's rootProject is webapp/, so its
+// parent is the repository root (the folder holding .env, submission.csv, and ranker/).
+tasks.named<org.springframework.boot.gradle.tasks.run.BootRun>("bootRun") {
+    workingDir = rootProject.projectDir.parentFile
+}
+
 // ── Bundle the Kotlin/JS frontend bundle into the Spring Boot jar's static resources ──
 // The frontend's production webpack output is copied into build/resources/main/static
 // so Spring Boot serves the SPA at "/". This runs for both bootRun and bootJar.

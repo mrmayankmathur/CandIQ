@@ -19,6 +19,8 @@ services:
       DISCOVERY_REPO_ROOT: /work
       DISCOVERY_PYTHON: /opt/venv/bin/python
       KMP_DUPLICATE_LIB_OK: "TRUE"
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      OPENAI_MODEL: ${OPENAI_MODEL:-gpt-5}
     volumes:
       - ../dataset:/work/dataset:ro                 # candidates.jsonl (read-only)
       - ../ranker:/work/ranker                      # ranker package + artifacts (re-run reads these)

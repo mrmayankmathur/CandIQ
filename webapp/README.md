@@ -61,6 +61,22 @@ whole app on **:8080**. Startup loads the JD, the 100 ranked rows, and caches th
 java -jar backend/build/libs/backend-0.1.0.jar
 ```
 
+## AI Deep-Dive
+
+The webapp includes a button to generate a grounded AI recruiter assessment for a selected candidate using OpenAI. 
+**This is for the interactive demo only; the judged ranking runs offline without it.**
+
+To enable it locally:
+1. Create a `.env` file at the **repo root** (it is gitignored):
+   ```env
+   OPENAI_API_KEY=your-openai-api-key-here
+   OPENAI_MODEL=gpt-5
+   ```
+2. Run `./gradlew :backend:bootRun`. 
+3. Open a candidate profile and click "✨ Generate AI Deep-Dive".
+
+If no key is provided, the button gracefully informs you how to enable it.
+
 ## API
 
 | Method | Path                       | Purpose                                            |

@@ -25,6 +25,11 @@ ranker/artifacts_smoke/
 # Scratch output dir for Docker reproduction runs (canonical copy is ./submission.csv)
 output/
 
+# Environment files
+.env
+.env.local
+webapp/.env
+
 # Ignore Java/Kotlin/Gradle build directories
 webapp/.gradle/
 webapp/build/

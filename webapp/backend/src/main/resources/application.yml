@@ -4,6 +4,11 @@ server:
 spring:
   application:
     name: redrob-discovery-webapp
+  # Load an optional repo-root .env (parsed as properties) so OPENAI_* can live in a gitignored
+  # file for local `bootRun`. `optional:` => absent .env is fine (the no-key path still works).
+  # bootRun's working dir is pinned to the repo root in backend/build.gradle.kts so this resolves.
+  config:
+    import: "optional:file:.env[.properties]"
   mvc:
     async:
       # The live ranker re-run streams logs for ~60-90s over SSE; keep the async window generous.
@@ -20,3 +25,12 @@ logging:
 discovery:
   repo-root: ${DISCOVERY_REPO_ROOT:}
   python: ${DISCOVERY_PYTHON:}
+
+# OpenAI is used ONLY by the demo webapp's AI Deep-Dive (never by the judged ranking engine).
+# With no api-key set, the Deep-Dive endpoint degrades gracefully and the rest of the app is unaffected.
+openai:
+  api-key: ${OPENAI_API_KEY:}
+  model: ${OPENAI_MODEL:gpt-5}
+  base-url: ${OPENAI_BASE_URL:https://api.openai.com/v1}
+  request-timeout-ms: ${OPENAI_TIMEOUT_MS:60000}
+  connect-timeout-ms: ${OPENAI_CONNECT_TIMEOUT_MS:10000}
