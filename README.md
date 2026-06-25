@@ -8,6 +8,7 @@
   <a href="https://github.com/mrmayankmathur/intelligent_candidate_discovery"><img alt="Python" src="https://img.shields.io/badge/Python-3.10-blue?style=flat-square&logo=python" /></a>
   <a href="https://github.com/mrmayankmathur/intelligent_candidate_discovery"><img alt="Kotlin" src="https://img.shields.io/badge/Kotlin-JS-purple?style=flat-square&logo=kotlin" /></a>
   <a href="https://github.com/mrmayankmathur/intelligent_candidate_discovery"><img alt="Spring Boot" src="https://img.shields.io/badge/Spring_Boot-3.3-green?style=flat-square&logo=spring" /></a>
+  <a href="https://github.com/mrmayankmathur/intelligent_candidate_discovery"><img alt="Spring Boot" src="https://img.shields.io/badge/Java-21.0-orange?style=flat-square&logo=openjdk" /></a>
 </p>
 
 <p align="justify" style="font-size: 14px;">
