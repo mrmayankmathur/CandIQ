@@ -50,6 +50,8 @@ val App = FC<Props> {
         css {
             val s = asDynamic()
             s.display = "flex"
+            s.flex = "1"
+            s.width = "100%"
             s.minHeight = "100vh"
             s.background = Theme.bg
         }
