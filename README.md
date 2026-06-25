@@ -1,8 +1,8 @@
-<p align="center" style="text-align: center;">
+<div align="center">
   <a href="https://github.com/mrmayankmathur/intelligent_candidate_discovery">
     <h1>Intelligent Candidate Discovery</h1>
   </a>
-</p>
+</div>
 <p align="center" style="margin-bottom: 4px">The intelligent, constraint-aware candidate ranking engine.</p>
 <p align="center">
   <a href="https://github.com/mrmayankmathur/intelligent_candidate_discovery"><img alt="Python" src="https://img.shields.io/badge/Python-3.10-blue?style=flat-square&logo=python" /></a>
