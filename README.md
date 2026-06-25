@@ -3,14 +3,14 @@
     <h1>Intelligent Candidate Discovery</h1>
   </a>
 </div>
-<p align="center" style="margin-bottom: 4px">The intelligent, constraint-aware candidate ranking engine.</p>
+<p align="center">The intelligent, constraint-aware candidate ranking engine.</p>
 <p align="center">
   <a href="https://github.com/mrmayankmathur/intelligent_candidate_discovery"><img alt="Python" src="https://img.shields.io/badge/Python-3.10-blue?style=flat-square&logo=python" /></a>
   <a href="https://github.com/mrmayankmathur/intelligent_candidate_discovery"><img alt="Kotlin" src="https://img.shields.io/badge/Kotlin-JS-purple?style=flat-square&logo=kotlin" /></a>
   <a href="https://github.com/mrmayankmathur/intelligent_candidate_discovery"><img alt="Spring Boot" src="https://img.shields.io/badge/Spring_Boot-3.3-green?style=flat-square&logo=spring" /></a>
 </p>
 
-<p align="center" style="font-size: 14px; text-align: justify;">
+<p align="justify" style="font-size: 14px;">
   <strong>Intelligent Candidate Discovery</strong> is an advanced, constraint-aware candidate ranking platform. Designed to operate completely offline under strict compute limits, the core system is a <strong>Python</strong>-based ranking engine that evaluates <strong>100,000</strong>+ candidates locally using pre-computed FAISS vector indexes (BGE-small embeddings) and a deduplicated <strong>BM25</strong> text index. By fusing semantic and keyword retrieval via Reciprocal Rank Fusion (RRF) and passing candidates through a rigorous <strong>5-step</strong> heuristic honeypot filter, the engine successfully isolates highly qualified AI/ML engineers from resume-stuffers. The final top <strong>100</strong> list is surfaced in a polished, interactive Spring Boot and Kotlin/JS web sandbox.
 </p>
 
