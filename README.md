@@ -1,14 +1,14 @@
-<div style="text-align: center;">
+<p align="center" style="text-align: center;">
   <a href="https://github.com/mrmayankmathur/intelligent_candidate_discovery">
     <h1>Intelligent Candidate Discovery</h1>
   </a>
-</div>
-<div style="text-align: center; margin-bottom: 4px">The intelligent, constraint-aware candidate ranking engine.</div>
-<div style="text-align: center;">
+</p>
+<p align="center" style="margin-bottom: 4px">The intelligent, constraint-aware candidate ranking engine.</p>
+<p align="center">
   <a href="https://github.com/mrmayankmathur/intelligent_candidate_discovery"><img alt="Python" src="https://img.shields.io/badge/Python-3.10-blue?style=flat-square&logo=python" /></a>
   <a href="https://github.com/mrmayankmathur/intelligent_candidate_discovery"><img alt="Kotlin" src="https://img.shields.io/badge/Kotlin-JS-purple?style=flat-square&logo=kotlin" /></a>
   <a href="https://github.com/mrmayankmathur/intelligent_candidate_discovery"><img alt="Spring Boot" src="https://img.shields.io/badge/Spring_Boot-3.3-green?style=flat-square&logo=spring" /></a>
-</div>
+</p>
 
 ### Frontend UI Previews
 
