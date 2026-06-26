@@ -159,6 +159,14 @@ val Header = FC<HeaderProps> { props ->
             s.marginBottom = "8px"
             s.paddingBottom = "16px"
             s.borderBottom = "1px solid ${Theme.borderSoft}"
+            
+            // Sticky Header
+            s.position = "sticky"
+            s.top = "0"
+            s.zIndex = "10"
+            s.background = Theme.bg
+            s.margin = "-32px -40px 8px -40px"
+            s.padding = "32px 40px 16px 40px"
         }
         div {
             css {

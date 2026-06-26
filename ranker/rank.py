@@ -23,7 +23,7 @@ from __future__ import annotations
 
 import os
 
-# ── OpenMP runtime guard (MUST run before importing faiss / torch) ──────────
+# ── OpenMP runtime guard (MUST run before importing faiss / torch) ─>
 # On macOS, faiss-cpu and torch each bundle their own libomp. Loading the
 # FAISS index and then calling torch's encode() in the same process triggers a
 # duplicate-OpenMP abort (segfault, exit 139). Allowing the duplicate runtime

@@ -86,7 +86,7 @@ val RunConsole = FC<RunConsoleProps> { props ->
                 val s = asDynamic()
                 s.width = "min(820px, 96vw)"
                 s.background = "#181818"
-                s.border = "1px solid ${Theme.border}"
+                s.border = "1px solid #333333"
                 s.borderRadius = "16px"
                 s.overflow = "hidden"
                 s.boxShadow = "0 30px 80px rgba(0,0,0,0.6)"
@@ -101,7 +101,7 @@ val RunConsole = FC<RunConsoleProps> { props ->
                     s.alignItems = "center"
                     s.justifyContent = "space-between"
                     s.padding = "14px 18px"
-                    s.borderBottom = "1px solid ${Theme.border}"
+                    s.borderBottom = "1px solid #333333"
                 }
                 div {
                     css {
@@ -129,6 +129,7 @@ val RunConsole = FC<RunConsoleProps> { props ->
                             val s = asDynamic()
                             s.fontWeight = "700"
                             s.fontSize = "15px"
+                            s.color = "#FFFFFF"
                         }
                         +"Live Ranking Engine"
                     }
@@ -136,7 +137,7 @@ val RunConsole = FC<RunConsoleProps> { props ->
                         css {
                             val s = asDynamic()
                             s.fontSize = "12px"
-                            s.color = Theme.dim
+                            s.color = "#A0A0A0"
                             s.fontFamily = Theme.mono
                         }
                         +when (status) {
@@ -152,8 +153,8 @@ val RunConsole = FC<RunConsoleProps> { props ->
                         s.cursor = if (running) "not-allowed" else "pointer"
                         s.opacity = if (running) "0.4" else "1"
                         s.background = "transparent"
-                        s.border = "1px solid ${Theme.border}"
-                        s.color = Theme.pageText
+                        s.border = "1px solid #333333"
+                        s.color = "#FFFFFF"
                         s.borderRadius = "8px"
                         s.padding = "6px 12px"
                         s.fontSize = "13px"
@@ -184,13 +185,15 @@ val RunConsole = FC<RunConsoleProps> { props ->
                     div {
                         css {
                             val s = asDynamic()
-                            s.color = Theme.faint
+                            s.color = "#A0A0A0"
                         }
                         +"Starting the ranking engine… (full run is ~60–90s)"
                     }
                 }
                 lines.forEach { line ->
-                    div { +line }
+                    // Clean up absolute path for video demo privacy
+                    val cleanLine = line.replace("/Users/mayankmathur/Desktop/Mayanks_Projects/intelligent_candidate_discovery", "~/CandIQ")
+                    div { +cleanLine }
                 }
             }
         }

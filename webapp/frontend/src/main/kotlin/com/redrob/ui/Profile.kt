@@ -55,6 +55,7 @@ val ProfileDrawer = FC<ProfileDrawerProps> { props ->
                 s.overflowY = "auto"
                 s.background = Theme.card
                 s.borderLeft = "1px solid ${Theme.borderSoft}"
+                s.zIndex = "1000"
                 s.padding = "32px 30px 60px"
                 s.boxShadow = "-20px 0 60px rgba(0,0,0,0.1)"
                 s.animation = "${Theme.slideInRight} 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)"
